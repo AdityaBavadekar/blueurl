@@ -1,5 +1,15 @@
 # blueurl
 Just another URL Shortner
+- Visit Live running api: https://blueurl.vercel.app/
+
+## Examples
+
+| Redirects | Shorturl | urlCode |
+| --------- | -------- | -------- |
+| Codeforces Ratings System | https://blueurl.vercel.app/cf-ratings | `cf-ratings` |
+| Interstellar (Main Theme) - Spotify | https://blueurl.vercel.app/interstellar | `interstellar` |
+| My Github Profile | https://blueurl.vercel.app/adi.me | `adi.me` |
+| This repo | https://blueurl.vercel.app/blu | `blu` |
 
 ## Screenshots
 
