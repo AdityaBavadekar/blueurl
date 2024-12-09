@@ -5,7 +5,7 @@ const formatUrlCodeToShortenedUrl = (urlCode) => {
 }
 
 const shortenedUrlToDbUrl = (shortenedUrl) => {
-    return shortenedUrl.replace('[$root$]', process.env.BASE_URL);
+    return shortenedUrl.replace('[$root$]', process.env.BASE_URL || 'https://blueurl.vercel.app/');
 }
 
 export const createShortenedUrl = async (req, res) => {
