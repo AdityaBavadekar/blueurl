@@ -9,6 +9,10 @@ const shortenedUrlSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    password: {
+        type: String,
+        default: null,
+    },
     shortUrl: {
         type: String,
         required: true,
