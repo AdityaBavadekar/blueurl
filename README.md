@@ -1,6 +1,5 @@
 # blueurl
 Just another URL Shortner
-- Visit Live running api: https://blueurl.vercel.app/
 
 ## Examples
 
@@ -10,6 +9,12 @@ Just another URL Shortner
 | Interstellar (Main Theme) - Spotify | https://blueurl.vercel.app/interstellar | `interstellar` |
 | My Github Profile | https://blueurl.vercel.app/adi.me | `adi.me` |
 | This repo | https://blueurl.vercel.app/blu | `blu` |
+
+- ℹ️ For stats about the shortened url add `/api/stats/` before the urlCode.
+
+## Live API
+- Visit : [`https://blueurl.vercel.app/`](https://blueurl.vercel.app/)
+
 
 ## Screenshots
 
