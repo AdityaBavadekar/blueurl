@@ -2,9 +2,11 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js'
 import cors from 'cors';
+import path, { dirname } from 'path';
 
 import { shortenedUrlsRouter } from './routes/shortenedurls.route.js';
 import { redirectRouter } from './routes/redirect.route.js';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 connectDB();
@@ -20,8 +22,17 @@ app.use(cors(
     }
 ));
 
-app.use('/api/', shortenedUrlsRouter);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+  
+app.use('/api/', shortenedUrlsRouter);
+app.get('/api-docs', (req, res) => {
     const apiDoc = {
         status: 'BLUE URL API is Live',
         endpoints: [

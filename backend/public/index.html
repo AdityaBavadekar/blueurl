@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue URL Shortener</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- <body class="bg-black text-gray-100 min-h-screen flex flex-col items-center justify-center"> -->
+<body class="bg-gradient-to-br from-black via-gray-900 to-gray-800 min-h-screen flex flex-col items-center justify-center">
+    <h1 class="lg:text-8xl md:text-5xl font-bold text-gray-200 mb-5 p-5 select-none text-center text-4xl">Blue URL Shortener</h1>
+    <!-- <div class="bg-gradient-to-br from-gray-700 via-gray-800 to-gray-800 border-2 border-slate-900 shadow-md rounded-lg p-6 mt-3 w-full max-w-md"> -->
+    <div class="p-6 mt-3 w-full max-w-md">
+        
+        <div class="mb-5 pb-2">
+            <label for="url" class="ms-4 block text-lg text-gray-300 mb-3 select-none">Enter URL</label>
+            <input type="text" id="url" 
+                class="w-full px-4 py-5 bg-gray-900 border border-1 border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-800 select-none" 
+                placeholder="https://example.com"
+                autocomplete="off"
+                spellcheck="false">
+        </div>
+        
+        <div class="mb-5 pb-2 hidden transition-all duration-75" id="short-code-container">
+            <label for="short-code" class="ms-4 block text-lg text-gray-300 mb-3 select-none">Short URL Code (Optional)</label>
+            <input type="text" id="short-code" 
+            class="w-full px-4 py-4 bg-gray-900 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-800 select-none" 
+            placeholder="Leave empty to auto-generate"
+            autocomplete="off"
+            spellcheck="false"
+            >
+        </div>
+
+        <div class="pt-5 flex justify-between items-center">
+            <button id="shorten-btn"
+                class="bg-blue-900 hover:bg-blue-950 text-white select-none font-medium py-3 px-5 rounded-lg">
+                Shorten URL
+            </button>
+            <button id="reset-btn" 
+                class="bg-transparent hover:text-gray-500 text-gray-400 select-none font-medium py-3 px-5 rounded-lg">
+                Reset
+            </button>
+        </div>
+
+        <div id="result" class="mt-6 pt-5 hidden">
+            <h2 class="text-lg font-semibold text-gray-300">Shortened URL:</h2>
+            <a class="text-blue-400 underline mt-2" id="short-url"></a>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
