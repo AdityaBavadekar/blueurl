@@ -14,12 +14,8 @@ Just another URL Shortner
 
 ## Live API
 - Visit : [`https://blueurl.vercel.app/`](https://blueurl.vercel.app/)
+- [View Docs](https://blueurl.vercel.app/api-docs)
 
 
 ## Screenshots
-
-| Screenshots | Screenshots |
-|--------------|--------------|
-| ![Screenshot 1](screenshots/img1.png) | ![Screenshot 2](screenshots/img2.png) |
-| ![Screenshot 1](screenshots/img3.png) | ![Screenshot 2](screenshots/img4.png) |
-| ![Screenshot 1](screenshots/img5.png) |  |
+![Image 1](screenshots/image.png)
