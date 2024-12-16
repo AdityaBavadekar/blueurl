@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js'
+import cors from 'cors';
 
 import { shortenedUrlsRouter } from './routes/shortenedurls.route.js';
 import { redirectRouter } from './routes/redirect.route.js';
@@ -12,6 +13,12 @@ const app = express()
 
 // Allows to parse req.body as json
 app.use(express.json());
+app.use(cors(
+    {
+        origin: process.env.CORS_ORIGIN || '*',
+        methods: 'GET,POST,DELETE'
+    }
+));
 
 app.use('/api/', shortenedUrlsRouter);
 app.get('/', (req, res) => {
